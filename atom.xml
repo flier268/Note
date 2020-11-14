@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Flier268&#39;s note</title>
+  
+  <subtitle>Somewhere keep my learning note</subtitle>
+  <link href="http://localhost:4000/atom.xml" rel="self"/>
+  
+  <link href="http://localhost:4000/"/>
+  <updated>2020-11-13T15:53:36.227Z</updated>
+  <id>http://localhost:4000/</id>
+  
+  <author>
+    <name>flier268</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://localhost:4000/2020/11/13/hello-world/"/>
+    <id>http://localhost:4000/2020/11/13/hello-world/</id>
+    <published>2020-11-13T08:03:26.109Z</published>
+    <updated>2020-11-13T15:53:36.227Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    <category term="Hello" scheme="http://localhost:4000/categories/Hello/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to use NodeJs with Typescript and ESB module</title>
+    <link href="http://localhost:4000/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/"/>
+    <id>http://localhost:4000/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/</id>
+    <published>2020-11-13T01:11:57.000Z</published>
+    <updated>2020-11-14T02:09:07.656Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="各元件介紹"><a href="#各元件介紹" class="headerlink" title="各元件介紹"></a>各元件介紹</h2><p>先介紹各個元件是什麼</p><ol><li>vscode(Visual Studio Code)：多功能的IDE</li><li>npm：套件管理工具？(目前認知是這樣，後續補充)</li><li>nodemon：監視原始碼是否有變更，有變更則依照腳本自動重新啟動</li><li>node.js；採用V8引擎讓Javascript成為後端語言的強大開發工具</li><li>typescript：由Microsoft主導，將Javascript加入強型別特性的新語言，一般需要將.ts檔案藉由typescript編譯為.js，讓瀏覽器或Node.js能夠辨識</li><li>ts-node：讓typescript檔案無須編譯為.js檔案，即可直接使用.ts檔</li></ol><p>Node.js原生是沒有支援Typescript的，並且在14版才正式以ESM取代CSM，因此網路上到處都是CSM的教學，是Typescript且是ESM的文章稀少，初學Node.js的我為此燒透了腦</p><p>VSCode提供一個方便的除錯器讓開發者除錯，但要怎麼把這6個東西串再一起呢？</p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol><li>vscode啟動nodemon</li><li>依照nodemon.json所寫的內容，自動透過npm執行node.js</li><li>node.js載入ts-node</li><li>ts-node會自動使用typescript去動態的編譯.ts檔案並且執行(這個寫在套件裡，我們不用去管)</li></ol><hr><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="操作步驟"><a href="#操作步驟" class="headerlink" title="操作步驟"></a>操作步驟</h3><ol><li>在launch.json添加<br>123<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using System.IO;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;各元件介紹&quot;&gt;&lt;a href=&quot;#各元件介紹&quot; class=&quot;headerlink&quot; title=&quot;各元件介紹&quot;&gt;&lt;/a&gt;各元件介紹&lt;/h2&gt;&lt;p&gt;先介紹各個元件是什麼&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;vscode(Visual Studio Code)：多功能的IDE</summary>
+      
+    
+    
+    
+    <category term="Node.js" scheme="http://localhost:4000/categories/Node-js/"/>
+    
+    
+    <category term="aaa" scheme="http://localhost:4000/tags/aaa/"/>
+    
+    <category term="bbb" scheme="http://localhost:4000/tags/bbb/"/>
+    
+  </entry>
+  
+</feed>
