@@ -6,7 +6,7 @@
   <link href="https://flier268.github.io/Note/atom.xml" rel="self"/>
   
   <link href="https://flier268.github.io/Note/"/>
-  <updated>2020-11-14T02:09:07.656Z</updated>
+  <updated>2020-11-14T03:17:59.187Z</updated>
   <id>https://flier268.github.io/Note/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/"/>
     <id>https://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/</id>
     <published>2020-11-13T01:11:57.000Z</published>
-    <updated>2020-11-14T02:09:07.656Z</updated>
+    <updated>2020-11-14T03:17:59.187Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="各元件介紹"><a href="#各元件介紹" class="headerlink" title="各元件介紹"></a>各元件介紹</h2><p>先介紹各個元件是什麼</p><ol><li>vscode(Visual Studio Code)：多功能的IDE</li><li>npm：套件管理工具？(目前認知是這樣，後續補充)</li><li>nodemon：監視原始碼是否有變更，有變更則依照腳本自動重新啟動</li><li>node.js；採用V8引擎讓Javascript成為後端語言的強大開發工具</li><li>typescript：由Microsoft主導，將Javascript加入強型別特性的新語言，一般需要將.ts檔案藉由typescript編譯為.js，讓瀏覽器或Node.js能夠辨識</li><li>ts-node：讓typescript檔案無須編譯為.js檔案，即可直接使用.ts檔</li></ol><p>Node.js原生是沒有支援Typescript的，並且在14版才正式以ESM取代CSM，因此網路上到處都是CSM的教學，是Typescript且是ESM的文章稀少，初學Node.js的我為此燒透了腦</p><p>VSCode提供一個方便的除錯器讓開發者除錯，但要怎麼把這6個東西串再一起呢？</p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol><li>vscode啟動nodemon</li><li>依照nodemon.json所寫的內容，自動透過npm執行node.js</li><li>node.js載入ts-node</li><li>ts-node會自動使用typescript去動態的編譯.ts檔案並且執行(這個寫在套件裡，我們不用去管)</li></ol><hr><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="操作步驟"><a href="#操作步驟" class="headerlink" title="操作步驟"></a>操作步驟</h3><ol><li>在launch.json添加<br>123<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using System.IO;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="各元件介紹"><a href="#各元件介紹" class="headerlink" title="各元件介紹"></a>各元件介紹</h2><p>先介紹各個元件是什麼</p><ol><li>vscode(Visual Studio Code)：多功能的IDE</li><li>npm：套件管理工具？(目前認知是這樣，後續補充)</li><li>nodemon：監視原始碼是否有變更，有變更則依照腳本自動重新啟動</li><li>node.js；採用V8引擎讓Javascript成為後端語言的強大開發工具</li><li>typescript：由Microsoft主導，將Javascript加入強型別特性的新語言，一般需要將.ts檔案藉由typescript編譯為.js，讓瀏覽器或Node.js能夠辨識</li><li>ts-node：讓typescript檔案無須編譯為.js檔案，即可直接使用.ts檔</li></ol><p>Node.js原生是沒有支援Typescript的，並且在14版才正式以ESM取代CSM，因此網路上到處都是CSM的教學，是Typescript且是ESM的文章稀少，初學Node.js的我為此燒透了腦</p><p>VSCode提供一個方便的除錯器讓開發者除錯，但要怎麼把這6個東西串再一起呢？</p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol><li>vscode啟動nodemon</li><li>依照nodemon.json所寫的內容，自動透過npm執行node.js</li><li>node.js載入ts-node</li><li>ts-node會自動使用typescript去動態的編譯.ts檔案並且執行(這個寫在套件裡，我們不用去管)</li></ol><hr><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="操作步驟"><a href="#操作步驟" class="headerlink" title="操作步驟"></a>操作步驟</h3><ol><li>在launch.json添加<br>123<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.IO;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     
       
