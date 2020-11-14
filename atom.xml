@@ -3,11 +3,11 @@
   <title>Flier268&#39;s note</title>
   
   <subtitle>Somewhere keep my learning note</subtitle>
-  <link href="http://flier268.github.io/Note/atom.xml" rel="self"/>
+  <link href="https://flier268.github.io/Note/atom.xml" rel="self"/>
   
-  <link href="http://flier268.github.io/Note/"/>
+  <link href="https://flier268.github.io/Note/"/>
   <updated>2020-11-14T02:09:07.656Z</updated>
-  <id>http://flier268.github.io/Note/</id>
+  <id>https://flier268.github.io/Note/</id>
   
   <author>
     <name>flier268</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>How to use NodeJs with Typescript and ESB module</title>
-    <link href="http://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/"/>
-    <id>http://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/</id>
+    <link href="https://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/"/>
+    <id>https://flier268.github.io/Note/2020/11/13/How%20to%20use%20NodeJs%20with%20Typescript%20and%20ESB%20module/</id>
     <published>2020-11-13T01:11:57.000Z</published>
     <updated>2020-11-14T02:09:07.656Z</updated>
     
@@ -35,12 +35,12 @@
     
     
     
-    <category term="Node.js" scheme="http://flier268.github.io/Note/categories/Node-js/"/>
+    <category term="Node.js" scheme="https://flier268.github.io/Note/categories/Node-js/"/>
     
     
-    <category term="aaa" scheme="http://flier268.github.io/Note/tags/aaa/"/>
+    <category term="aaa" scheme="https://flier268.github.io/Note/tags/aaa/"/>
     
-    <category term="bbb" scheme="http://flier268.github.io/Note/tags/bbb/"/>
+    <category term="bbb" scheme="https://flier268.github.io/Note/tags/bbb/"/>
     
   </entry>
   
