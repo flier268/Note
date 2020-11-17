@@ -40,7 +40,19 @@ $(function () {
       })
   }
   $('.search-mask, .search-close-button').on('click', closeSearch)
-
+  //search
+  const highlightKeyword = (text, slice) => {
+    let result = '';
+    let prevEnd = slice.start;
+    slice.hits.forEach(hit => {
+      result += text.substring(prevEnd, hit.position);
+      let end = hit.position + hit.length;
+      result += `<b class="search-keyword">${text.substring(hit.position, end)}</b>`;
+      prevEnd = end;
+    });
+    result += text.substring(prevEnd, slice.end);
+    return result;
+  };
   function search(path) {
     $.ajax({
       url: GLOBAL_CONFIG.root + path,
@@ -80,11 +92,7 @@ $(function () {
                 indexContent = dataContent.indexOf(keyword)
                 if (indexTitle < 0 && indexContent < 0) {
                   isMatch = false
-                } else {
-                  if (indexContent < 0) {
-                    indexContent = 0
-                  }
-                }
+                } 
               })
             }
             // show search results

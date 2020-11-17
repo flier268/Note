@@ -1919,3 +1919,6 @@ a.fancybox:focus {
   overflow-y: auto;
   max-height: 10.5rem;
 }
+#local-search .search-keyword {
+  color: #f00;
+}
