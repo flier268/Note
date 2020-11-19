@@ -4,8 +4,8 @@
 
 # Site
 title: Flier268's note
-subtitle: 'Somewhere keep my learning note'
-description: ''
+subtitle: 'Keep learning until dead.'
+description: 'Somewhere keep my learning note'
 keywords: 
   - Note
   - Node.js
@@ -15,13 +15,12 @@ keywords:
   - Visual Studio Code
   - Vscode
 author: flier268
-language: en
+language: ["en","zh-tw"]
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://flier268.github.io/Note
-#url: http://localhost:4000/
 root: /Note/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -115,14 +114,6 @@ deploy:
   - type: 'git'
     repo: https://github.com/flier268/Note.git
     branch: gh-pages
-  - type: 'git'
-    repo: https://github.com/flier268/Note.git
-    branch: src
-    extend_dirs: /
-    ignore_hidden: false
-    ignore_pattern:
-      - public: .
-      - .deploy_git: .
 feed:
   enable: true
   type: atom
@@ -135,5 +126,6 @@ search:
   path: search.xml
   field: post
   content: true
+  format: html
 sitemap:
   path: sitemap.xml
