@@ -159,9 +159,9 @@ post_copyright:
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/theme-config.html#auto-excerpt
-# auto_excerpt:
-#   enable: false
-#   length: 150
+auto_excerpt:
+  enable: true
+  length: 150
 
 # slide
 # For reveal.js config, see https://github.com/hakimel/reveal.js#configuration
@@ -210,20 +210,20 @@ addThis:
 # Comments System
 # ---------------
 disqus:
-  enable: false
-  #shortname:
-  #count:
+  enable: true
+  shortname: flier268-note
+  count: 3
 
 # laibili:
 # enable: false
 # uid:
 
-gitment:
-  enable: true
-  owner: flier268
-  repo: Note
-  client_id: e7f2d921556ed70dced0
-  client_secret: 5ae7f9db6ea732e2564beafe034c866be2ce8b80
+# gitment:
+#   enable: false
+#   owner: flier268
+#   repo: Note
+#   client_id: e7f2d921556ed70dced0
+#   client_secret: 5ae7f9db6ea732e2564beafe034c866be2ce8b80
 
 # gitalk:
 #   enable: false
