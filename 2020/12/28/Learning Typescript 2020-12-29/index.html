@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="[&quot;en&quot;,&quot;zh-tw&quot;,&quot;default&quot;]"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Learning Typescript 2020-12-29"><meta name="keywords" content=""><meta name="author" content="flier268"><meta name="copyright" content="flier268"><title>Learning Typescript 2020-12-29 | Flier268's note</title><link rel="shortcut icon" href="/Note/melody-favicon.ico"><link rel="stylesheet" href="/Note/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://www.googletagmanager.com/gtag/js?id=G-9M1D6CDDGY"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9M1D6CDDGY');</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/Note/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.3.0'
+} </script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/Note/atom.xml" title="Flier268's note" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-30-%E6%A9%9F%E5%8B%95%E8%97%8D%E5%9C%96%E3%83%BB%E6%B5%81%E8%A8%80%E7%B5%82%E7%B5%90%E8%80%85-X-%E9%87%8D%E6%96%B0%E8%AA%8D%E8%AD%98%E7%89%A9%E4%BB%B6%E7%9A%84%E8%A4%87%E5%90%88-Favour-Object-Composition-Over-Class-Inheritance"><span class="toc-number">1.</span> <span class="toc-text">Day 30. 機動藍圖・流言終結者 X 重新認識物件的複合 - Favour Object Composition Over Class Inheritance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-31-%E6%88%B0%E7%B7%9A%E6%93%B4%E5%BC%B5%E3%83%BB%E5%B0%88%E6%A1%88%E7%9B%A3%E6%8E%A7-X-%E7%B7%A8%E8%AD%AF%E8%A8%AD%E5%AE%9A-TypeScript-Compiler-Compile-Configurations"><span class="toc-number">2.</span> <span class="toc-text">Day 31. 戰線擴張・專案監控 X 編譯設定 - TypeScript Compiler Compile Configurations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-32-%E6%88%B0%E7%B7%9A%E6%93%B4%E5%BC%B5%E3%83%BB%E5%B0%88%E6%A1%88%E8%BC%B8%E5%87%BA-X-%E8%BC%B8%E5%87%BA%E8%A8%AD%E5%AE%9A-TypeScript-Compiler-Output-Configurations"><span class="toc-number">3.</span> <span class="toc-text">Day 32. 戰線擴張・專案輸出 X 輸出設定 - TypeScript Compiler Output Configurations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-33-%E6%88%B0%E7%B7%9A%E6%93%B4%E5%BC%B5%E3%83%BB%E5%B0%88%E6%A1%88%E9%99%A4%E9%8C%AF-X-%E6%BA%90%E7%A2%BC%E5%B0%8D%E7%85%A7-TypeScript-Compiler-Debug-Techniques"><span class="toc-number">4.</span> <span class="toc-text">Day 33. 戰線擴張・專案除錯 X 源碼對照 - TypeScript Compiler Debug Techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8lite-server%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E7%B0%A1%E6%98%93%E7%9A%84%E7%92%B0%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">使用lite-server建立一個簡易的環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%A4%E9%8C%AF%E6%8A%80%E5%B7%A7"><span class="toc-number">4.2.</span> <span class="toc-text">除錯技巧</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/Note/img/avatar.png"></div><div class="author-info__name text-center">flier268</div><div class="author-info__description text-center">Somewhere keep my learning note</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/flier268">Follow me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/Note/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/Note/tags"><span class="pull-left">Tags</span><span class="pull-right">6</span></a><a class="author-info-articles__categories article-meta" href="/Note/categories"><span class="pull-left">Categories</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/Note/">Flier268's note</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/Note/">Home</a><a class="site-page" href="/Note/archives">Archives</a><a class="site-page" href="/Note/tags">Tags</a><a class="site-page" href="/Note/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Learning Typescript 2020-12-29</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-01-28</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/Note/categories/Typescript/">Typescript</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/Note/2020/12/28/Learning%20Typescript%202020-12-29/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2020/12/28/Learning Typescript 2020-12-29/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="Day-30-機動藍圖・流言終結者-X-重新認識物件的複合-Favour-Object-Composition-Over-Class-Inheritance"><a href="#Day-30-機動藍圖・流言終結者-X-重新認識物件的複合-Favour-Object-Composition-Over-Class-Inheritance" class="headerlink" title="Day 30. 機動藍圖・流言終結者 X 重新認識物件的複合 - Favour Object Composition Over Class Inheritance"></a><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10221357">Day 30. 機動藍圖・流言終結者 X 重新認識物件的複合 - Favour Object Composition Over Class Inheritance</a></h2><p>本篇實際上是在總結先前的策略模式，並證明網路上的大多數文章都是錯的<br><strong>最好的做法還是使用策略模式</strong></p>
+<hr>
+<h2 id="Day-31-戰線擴張・專案監控-X-編譯設定-TypeScript-Compiler-Compile-Configurations"><a href="#Day-31-戰線擴張・專案監控-X-編譯設定-TypeScript-Compiler-Compile-Configurations" class="headerlink" title="Day 31. 戰線擴張・專案監控 X 編譯設定 - TypeScript Compiler Compile Configurations"></a><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10222025">Day 31. 戰線擴張・專案監控 X 編譯設定 - TypeScript Compiler Compile Configurations</a></h2><ul>
+<li><code>lib</code>幫Typescript擴充額外的功能<blockquote>
+<p>某些功能層面語法不能用的原因其實是因為沒有在tsconfig.json加入相對應的lib，導致typescript不認識他</p>
+<ul>
+<li>語法層面（Syntatic Aspect）泛指單純語法解析上的特點，通常語法是自然內建在編譯器的</li>
+<li>功能層面（Utility Aspect）泛指可以藉由語法實踐的功能，並非內建在編譯器，通常會以函式庫（Library）的方式載入，或以 ECMAScript 的觀點來看 —— 以 Polyfill 的方式載入功能。    </li>
+</ul>
+</blockquote>
+<ul>
+<li>像Promise等<strong>功能層面</strong>的語法，需添加<code>&quot;ES2016&quot;</code>或更高</li>
+</ul>
+</li>
+<li><code>target</code>指的是<strong>要編譯的目標javascript版本</strong><blockquote>
+<p>ES3, ES5, ES6 之類的</p>
+</blockquote>
+</li>
+<li><code>module</code>指的是<strong>要編譯的目標javascript模組樣式</strong><blockquote>
+<p>require(‘xxx’) 或 import xxx from ‘xxx’</p>
+</blockquote>
+</li>
+<li><code>target</code>與<code>module</code>跟Typescript怎麼寫無關，只跟編譯出來的javascript有關</li>
+</ul>
+<hr>
+<h2 id="Day-32-戰線擴張・專案輸出-X-輸出設定-TypeScript-Compiler-Output-Configurations"><a href="#Day-32-戰線擴張・專案輸出-X-輸出設定-TypeScript-Compiler-Output-Configurations" class="headerlink" title="Day 32. 戰線擴張・專案輸出 X 輸出設定 - TypeScript Compiler Output Configurations"></a><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10222307">Day 32. 戰線擴張・專案輸出 X 輸出設定 - TypeScript Compiler Output Configurations</a></h2><ul>
+<li><code>rootDir</code>是原始碼所在的位置<blockquote>
+<p>通常為”./src”</p>
+</blockquote>
+</li>
+<li><code>outDir</code>是執行tsc後，編譯出來的javascript的位置<blockquote>
+<p>通常為”./build”</p>
+</blockquote>
+</li>
+<li>就算有原始碼沒有放在<code>rootDir</code>設定的目錄，tsc也一樣會試圖編譯，但是會產生奇怪的目錄結構<br>  <img src=":/08b0ef7c6624485398a1d8737c72b5c1" alt="a7ee9eadba4f1d8450cb62b0a5e01ab9.png"></li>
+<li>為了避免上述的狀況，可以在tsconfig.json設定  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;noEmitOnError&quot;: true</span><br></pre></td></tr></table></figure>
+  使得tsc在遇到錯誤的時候不會輸出任何檔案</li>
+<li><code>rootDirs </code>可以設定多個專案目錄</li>
+<li><code>outFile</code>可以打包成單個檔案，但是有<code>module</code>的限制<ul>
+<li>不受<code>outDir</code>影響</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Day-33-戰線擴張・專案除錯-X-源碼對照-TypeScript-Compiler-Debug-Techniques"><a href="#Day-33-戰線擴張・專案除錯-X-源碼對照-TypeScript-Compiler-Debug-Techniques" class="headerlink" title="Day 33. 戰線擴張・專案除錯 X 源碼對照 - TypeScript Compiler Debug Techniques"></a><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10223348">Day 33. 戰線擴張・專案除錯 X 源碼對照 - TypeScript Compiler Debug Techniques</a></h2><h3 id="使用lite-server建立一個簡易的環境"><a href="#使用lite-server建立一個簡易的環境" class="headerlink" title="使用lite-server建立一個簡易的環境"></a>使用lite-server建立一個簡易的環境</h3><p>lite-server是個簡易的網頁伺服器，具有以下特色</p>
+<ul>
+<li>自動開啟網頁</li>
+<li>當原始碼變更時，網頁會自動更新</li>
+<li>待補…</li>
+</ul>
+<ol>
+<li>安裝lite-server <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i lite-server --save-dev</span><br></pre></td></tr></table></figure></li>
+<li>加入dev，讓npm執行lite-server<br>package.json <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">/* 略... */</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">	<span class="attr">&quot;dev&quot;</span>: <span class="string">&quot;lite-server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/* 略... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;sourceMap&quot;: true</span><br></pre></td></tr></table></figure>
+<h3 id="除錯技巧"><a href="#除錯技巧" class="headerlink" title="除錯技巧"></a>除錯技巧</h3></li>
+<li> [JS][TS]<code>debugger</code>關鍵字<br>在執行到<code>debugger;</code>的時候，將會自動中斷</li>
+<li>[JS]在瀏覽器的除錯工具設中斷<br> <img src=":/b4e54275ce7d49dd970938dbf550ab6d" alt="c402b13341edfad163d0404baf0d02fa.png"></li>
+<li>[TS]使用sourceMap<br> tsconfig.json <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">	<span class="comment">/* 略... */</span></span><br><span class="line">	<span class="attr">&quot;sourceMap&quot;</span>: <span class="literal">true</span></span><br><span class="line">	<span class="comment">/* 略... */</span>  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 一樣在瀏覽器設定中斷<br> <img src=":/98326375dc894d70aa45a87ca3e9c563" alt="3fc1049317e82bfa13e5431e6a1942a1.png"></li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">flier268</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://flier268.github.io/Note/2020/12/28/Learning Typescript 2020-12-29/">https://flier268.github.io/Note/2020/12/28/Learning Typescript 2020-12-29/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/Note/2020/12/29/Learning%20Typescript%202020-12-30/"><i class="fa fa-chevron-left">  </i><span>Learning Typescript 2020-12-30</span></a></div><div class="next-post pull-right"><a href="/Note/2020/12/27/Learning%20Typescript%202020-12-28/"><span>Learning Typescript 2020-12-28</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://flier268.github.io/Note/2020/12/28/Learning%20Typescript%202020-12-29/';
+  this.page.identifier = '2020/12/28/Learning Typescript 2020-12-29/';
+  this.page.title = 'Learning Typescript 2020-12-29';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'flier268-note' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://flier268-note.disqus.com/count.js" async></script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 - 2021 By flier268</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/Note/js/utils.js?version=1.9.0"></script><script src="/Note/js/fancybox.js?version=1.9.0"></script><script src="/Note/js/sidebar.js?version=1.9.0"></script><script src="/Note/js/copy.js?version=1.9.0"></script><script src="/Note/js/fireworks.js?version=1.9.0"></script><script src="/Note/js/transition.js?version=1.9.0"></script><script src="/Note/js/scroll.js?version=1.9.0"></script><script src="/Note/js/head.js?version=1.9.0"></script><script src="/Note/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
