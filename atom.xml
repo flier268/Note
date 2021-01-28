@@ -65,9 +65,9 @@
     <link href="https://flier268.github.io/Note/2020/12/30/Learning%20Typescript%202020-12-31/"/>
     <id>https://flier268.github.io/Note/2020/12/30/Learning%20Typescript%202020-12-31/</id>
     <published>2020-12-30T08:00:00.000Z</published>
-    <updated>2021-01-27T17:03:33.120Z</updated>
+    <updated>2021-01-28T07:42:28.149Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Day-35-戰線擴張・命名空間-X-組織分明-TypeScript-Namespaces-Introduction"><a href="#Day-35-戰線擴張・命名空間-X-組織分明-TypeScript-Namespaces-Introduction" class="headerlink" title="Day 35. 戰線擴張・命名空間 X 組織分明 - TypeScript Namespaces Introduction"></a><a href="https://ithelp.ithome.com.tw/articles/10223480">Day 35. 戰線擴張・命名空間 X 組織分明 - TypeScript Namespaces Introduction</a></h2><ul><li>namespace的主要功能在於<strong>避免全域的汙染</strong></li><li>相同名稱的namespace會互相合併</li><li>使用export的function/class/namespace才能從命名空間以外存取</li><li>相同名稱的命名空間會合併，但是…<ul><li>除了interface這種本來就有可融合特性的之外，名稱皆不允許重複</li><li>就算有相同的名稱，只要沒有export，一樣不能存取<br>  <img src=":/bf9e044d52184203bd9d1674606ee04b" alt="7cd3b8ae467fffc4580cfe39952e2731.png"></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Day-35-戰線擴張・命名空間-X-組織分明-TypeScript-Namespaces-Introduction"><a href="#Day-35-戰線擴張・命名空間-X-組織分明-TypeScript-Namespaces-Introduction" class="headerlink" title="Day 35. 戰線擴張・命名空間 X 組織分明 - TypeScript Namespaces Introduction"></a><a href="https://ithelp.ithome.com.tw/articles/10223480">Day 35. 戰線擴張・命名空間 X 組織分明 - TypeScript Namespaces Introduction</a></h2><ul><li>namespace的主要功能在於<strong>避免全域的汙染</strong></li><li>相同名稱的namespace會互相合併</li><li>使用export的function/class/namespace才能從命名空間以外存取</li><li>相同名稱的命名空間會合併，但是…<ul><li>除了interface這種本來就有可融合特性的之外，名稱皆不允許重複</li><li>就算有相同的名稱，只要沒有export，一樣不能存取<br>  <img src="bf9e044d52184203bd9d1674606ee04b" alt="7cd3b8ae467fffc4580cfe39952e2731.png"></li></ul></li></ul>]]></content>
     
     
       
